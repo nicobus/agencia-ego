@@ -5,3 +5,51 @@
 .end-dropdown{
     background-color: #efeeef;
 }
+.list-title{
+    width: 345px;
+  height: 88px;
+  margin: 43px 15px 38px;
+  font-family: Montserrat;
+  font-size: 35px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: -0.7px;
+  color: #191919;
+}
+.model {
+    text-transform: capitalize;
+    width: 221px;
+    height: 30px;
+    margin: 0 24px 8px 23px;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.07;
+    letter-spacing: -0.65px;
+    text-align: center;
+    color: #000000;
+  }
+  .year-price{
+    width: 268px;
+    height: 18px;
+    margin: 8px 0 0;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    text-align: center;
+    color: #191919;
+  }
+  .car-image{
+    width: 250px;
+    height: 130px;
+    margin: 22px 9px 0;
+    object-fit: contain;
+  }

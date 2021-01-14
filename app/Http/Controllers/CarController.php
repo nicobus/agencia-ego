@@ -14,8 +14,20 @@ class CarController extends Controller
      */
     public function index()
     {
-        //
+        $cars = Car::all();
+        $title = 'Descubri todos los modelos';
+        $vac = compact('cars', 'title');
+        return view('pages.carsList', $vac);
     }
+
+    public function indexByCategory($category)
+    {
+        $title = $category;
+        $cars = Car::carsByCategory($category)->get();
+        $vac = compact('cars', 'title');
+        return view('pages.carsList', $vac);
+    }
+    
 
     /**
      * Show the form for creating a new resource.
