@@ -20,30 +20,16 @@
 }
 .model {
     text-transform: capitalize;
-    width: 221px;
-    height: 30px;
     margin: 0 24px 8px 23px;
     font-family: Montserrat;
     font-size: 28px;
     font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.07;
-    letter-spacing: -0.65px;
     text-align: center;
     color: #000000;
   }
   .year-price{
-    width: 268px;
-    height: 18px;
-    margin: 8px 0 0;
     font-family: Montserrat;
     font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.28px;
     text-align: center;
     color: #191919;
   }
@@ -60,4 +46,34 @@
     width: 100%;
     height: 100%;
     z-index: 10;
+  }
+  .footer{
+    height: 50px;
+  }
+  @media (min-width: 1200px) {
+    .list-title{
+      font-size: 50px;
+    }
+    .car-image{
+      width: 600px;
+      height: 320px;
+    }
+    .card-subtitle{
+      font-size: 20px;
+    }
+    .card-title{
+      font-size: 50px;
+    }
+    .card-subtitle{
+      font-size: 20px;
+    }
+    .card-text{
+      font-size: 16px;
+    }
+    .carrousel-img{
+      width: 200px;
+    }
+    .navbar-collapse{
+      font-size: 24px;
+    }
   }

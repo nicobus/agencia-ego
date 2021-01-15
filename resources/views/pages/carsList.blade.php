@@ -2,12 +2,12 @@
 @extends('layouts.layout')
 
 @section('title')
-    Agencia EGO | Home
+    Agencia EGO | {{$title}}
 @endsection
 
 @section('content')
 <main>
-    <div class="list-title">{{$title}}</div>
+    <div class="list-title container-fluid">{{$title}}</div>
     <div class="panel-productos p-4">
       <div class="dropdown d-inline">
         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton01" data-bs-toggle="dropdown" aria-expanded="false">

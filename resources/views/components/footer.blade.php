@@ -1,5 +1,4 @@
 <footer>
-    <div>
-        
+    <div class="bg-dark footer">    
     </div>
 </footer>

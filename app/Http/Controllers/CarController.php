@@ -130,4 +130,9 @@ class CarController extends Controller
     {
         //
     }
+    public function listApi(){
+        $cars = Car::All();
+        return json_encode($cars);
+    }
 }
+
