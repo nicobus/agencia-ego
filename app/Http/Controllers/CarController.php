@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Car;
+use App\Category;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -16,15 +17,47 @@ class CarController extends Controller
     {
         $cars = Car::all();
         $title = 'Descubri todos los modelos';
-        $vac = compact('cars', 'title');
+        $categories = Category::all();
+        $cat = 'Todos';
+        $vac = compact('cars', 'title', 'categories', 'cat');
         return view('pages.carsList', $vac);
     }
 
-    public function indexByCategory($category)
+    public function listByCategory($category)
     {
         $title = $category;
+        $cat = $category;
         $cars = Car::carsByCategory($category)->get();
-        $vac = compact('cars', 'title');
+        $categories = Category::all();
+        $vac = compact('cars', 'title', 'categories', 'cat');
+        return view('pages.carsList', $vac);
+    }
+
+    public function listOrderBy($category, $orderType)
+    {
+        $title = $category;
+        $cat = $category;
+        switch ($orderType) {
+            case 'preciomenoramayor':
+                $cars = Car::carsByCategory($category)->orderBy('price', 'ASC')->get();
+                break;
+            case 'preciomayoramenor':
+                $cars = Car::carsByCategory($category)->orderBy('price', 'DESC')->get();
+                break;
+            case 'masnuevos':
+            $cars = Car::carsByCategory($category)->orderBy('year', 'DESC')->get();
+                break;
+            case 'masviejos':
+                $cars = Car::carsByCategory($category)->orderBy('year', 'ASC')->get();
+                break;    
+            
+            default:
+               $cars = Car::all();
+                break;
+        }
+        
+        $categories = Category::all();
+        $vac = compact('cars', 'title', 'categories', 'cat');
         return view('pages.carsList', $vac);
     }
     
@@ -56,9 +89,12 @@ class CarController extends Controller
      * @param  \App\Car  $car
      * @return \Illuminate\Http\Response
      */
-    public function show(Car $car)
+    public function show($id)
     {
-        //
+        $car = Car::find($id);
+        $title = $car->model;
+        $vac = compact('car', 'title');
+        return view('pages.carDetail', $vac);
     }
 
     /**

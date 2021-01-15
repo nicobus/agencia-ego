@@ -23,6 +23,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/modelos/todoslosmodelos', 'CarController@index')->name('allCars');
 
-Route::get('/modelos/{category}', 'CarController@indexByCategory')->name('allCars');
+Route::get('/modelos/{category}', 'CarController@listByCategory')->name('carsByCategory');
+
+Route::get('/modelos/{category}/{orderType}', 'CarController@listOrderBy')->name('carsOrderBy');
+
+Route::get('/detallesmodelo/{car_id}', 'CarController@show')->name('carDetail');
 
 

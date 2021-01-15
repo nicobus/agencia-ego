@@ -14,6 +14,7 @@ class Car extends Model
 
     public function scopeCarsByCategory($query, $category){
         return $query->select('cars.*')->join('categories', 'category_id', '=', 'categories.id')
-        ->where('categories.id', '=', "$category");
+        ->where('categories.name', '=', "$category");
     }
 }
+
