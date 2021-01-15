@@ -13,7 +13,7 @@ Proyecto correspondiente al test de desarrollo Agencia-EGO
 
 ## Caracteristicas
 
-
+Tomando como base las imagenes de la web Zeplin, se replicaron las paginas utilizando integramente el framework bootstrap y CSS nativo para el frontend, y se utilizo PHP bajo el framework Laravel, en su version 7.0 para programar el backend. Se realizo una pequeña base de datos con migraciones y se populo la misma mediante seeders. Por ultimo se creo un endpoint que devuelve todos los modelos en la URL: localhost:8000/api/modelos.
 
 ## Autor ✒️
 
